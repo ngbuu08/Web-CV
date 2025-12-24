@@ -56,13 +56,23 @@ h1 {
 }
 
 #slider {
+    height: 1080px;
+    background-color: antiquewhite;
+}
 
+#slider h1 {
+    margin: 0;
+    line-height: 500px;
+    text-align: center;
+    font-size: 100px;
 }
 
 #content {
-
+    height: 1080px;
+    background-color: rgb(236, 206, 167);
 }
 
 #footer {
-
+    height: 520px;
+    background-color: rgb(255, 202, 133);
 }
