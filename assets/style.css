@@ -2,10 +2,24 @@
     font-family: playfair;
     src: url('Font/Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.ttf') format('truetype');
 }
-
+@media only screen and (max-width: 991px) {
+#nav li { 
+    display: none; 
+}
+#tasbar { 
+    width: 85%; 
+}
+#leftmenu {
+    width: 100%;
+    justify-content: space-between;
+    margin-left: 0;
+    padding-right: 7px;
+    box-sizing: border-box;
+}
+}
 @media only screen and (max-width: 500px) {
 body {
-    background-color: lightblue;
+    background-color: rgb(0, 0, 0);
 }
 #tasbar {
     width: 90%;
@@ -16,9 +30,25 @@ body {
     display: none;
 }
 
-#name {
-    padding-left: 0 !important;
-    padding-right: 2vw;
+#leftmenu {
+    width: 100%;
+    justify-content: space-between;
+    margin-left: 0;
+    padding-right: 7px;
+    box-sizing: border-box;
+}
+
+#start {
+    padding-top: 15vh !important;
+}
+
+#slogan {
+    width: 90vw !important;
+    font-size: 2rem !important;
+}
+
+#welcome {
+    width: 90vw !important;
 }
 
 }
@@ -49,23 +79,28 @@ body {
     align-items: center;
 }
 
-#avartar img {
+#leftmenu {
+    display: flex;
     position: absolute;
+}
+
+#avartar img {
     width: 35px;
     height: 35px;
     border-radius: 100%;
     display: flex;
     justify-items: center;
     margin-left: 3px;
-    transform: translateY(-50%);
 }
 
 #name {
-    position: absolute;
     font-family: 'Montserrat';
     font-weight: 900;
     color: #ffffffc9;
-    padding-left: 5vh;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    margin-left: 7px;
 }
 
 #nav {
@@ -76,7 +111,8 @@ body {
     display: flex;
     list-style: none;
     align-items: center;
-    justify-content: center
+    justify-content: center;
+    flex-shrink: 1;
 }
 
 #nav li {
@@ -114,7 +150,21 @@ body {
         box-shadow 0.5s ease;
 }
 
-
+#nav li:active a {
+    background-color: #9b9b9b71 ;
+    color: #ffffff;
+    height: 35px;
+    width: 73px;
+    margin: auto auto auto auto;
+    align-items: center;
+    justify-content: center;
+    border-radius: 99999px;
+    box-shadow: 0 0 30px #adadad44  ;
+    transition: 
+        background-color 0.4s ease,
+        color 0.5s ease,
+        box-shadow 0.5s ease;
+}
 
 
 #home {
@@ -125,10 +175,9 @@ body {
     background-color: rgb(0, 0, 0);
 }
 
-#slogan {
+#start {
     display: flex;
-    font-family: 'playfair'; 
-    font-weight: 600;
+    flex-direction: column;
     margin: auto auto auto auto;
     padding: 200px 0;
     height: 500px;
@@ -136,21 +185,55 @@ body {
     text-align: center;
     justify-content: center;
     align-items: center;
-    font-size: 70px;
-    color: #ffffff;
-    text-shadow: 0 0 50px #ffffff8a  ;
+    text-shadow: 0 0 50px #ffffff;
+}
+
+#portfolio {
+    font-family: 'Montserrat';
+    font-weight: 800;
+    background: linear-gradient(to left,#CADCFC, #225cfa, #007cf0);
+    background-clip: text;         
+    color: transparent;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 
+#slogan {
+    display: flex;
+    font-family: 'playfair'; 
+    font-weight: 600;
+    margin: 0;
+    height: auto;
+    width: 50vw;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: #ffffff;
+    text-shadow: 0 0 5rem 1rem #7a7a7a2c  ;
+}
+
+#welcome {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    color: #afafaf;
+    padding-top: 1vh;
+    font-size: 1.25rem;
+}
 
 #about {
-    
+    height: 2000px;
+    background-color: rgb(51, 51, 51);
 }
 
 #project {
-    
+    height: 2000px;
+    background-color: rgb(122, 122, 122);
 }
 
 #contact {
-
+    height: 2000px;
+    background-color: rgb(209, 209, 209);
 }
