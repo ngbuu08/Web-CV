@@ -2,13 +2,14 @@
     font-family: playfair;
     src: url('Font/Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.ttf') format('truetype');
 }
-@media only screen and (max-width: 991px) {
+
+/*-----------------------------------------------------------------*/
+
+@media only screen and (max-width: 1024px) {
 #nav li { 
     display: none; 
 }
-#tasbar { 
-    width: 85%; 
-}
+
 #leftmenu {
     width: 100%;
     justify-content: space-between;
@@ -16,30 +17,49 @@
     padding-right: 7px;
     box-sizing: border-box;
 }
+
+#sig img {
+    transform: translate(5vw, -4vh) !important;
 }
-@media only screen and (max-width: 500px) {
+
+}
+
+/*-----------------------------------------------------------------*/
+@media only screen and (max-width: 730px) {
+    #text {
+    width: 90% !important;
+    padding: 0 5vw 0 5vw !important;
+    margin: 0 auto 0 auto !important;
+}
+
+#introduce {
+    font-size: 1.1rem !important;
+    text-align: justify;
+}
+
+#sig img {
+    transform: translate(5vw, -4vh) !important;
+}
+
+#about {
+    flex-direction: column;
+}
+
+#pic {
+    padding: 0 0 20px 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+}
+}
+
+/*-----------------------------------------------------------------*/
+@media only screen and (max-width: 480px) {
 body {
     background-color: rgb(0, 0, 0);
 }
-#tasbar {
-    width: 90%;
-    justify-content: right;
-    position: relative;
-}
+
 #nav li {
     display: none;
-}
-
-#leftmenu {
-    width: 100%;
-    justify-content: space-between;
-    margin-left: 0;
-    padding-right: 7px;
-    box-sizing: border-box;
-}
-
-#start {
-    padding-top: 15vh !important;
 }
 
 #slogan {
@@ -51,19 +71,52 @@ body {
     width: 90vw !important;
 }
 
+#text {
+    width: 90% !important;
+    padding: 8vw 5vw 0 5vw !important;
+    margin: 0 auto 0 auto !important;
 }
+
+#introduce {
+    font-size: 1.1rem !important;
+    text-align: justify;
+}
+
+#sig img {
+    transform: translate(5vw, -4vh) !important;
+}
+
+#about {
+    flex-direction: column;
+}
+
+#pic {
+    padding: 0 0 30px 0 !important;
+    margin: 0 auto 0 auto !important;
+    width: 90% !important;
+    
+}
+
+}
+
+/*-----------------------------------------------------------------*/
+html {
+    scroll-behavior: smooth;
+}
+
 
 body {
     margin: 0;
 }
 
 #header {
-    height: 60px;
-    background-color: rgba(255, 255, 255, 0);
+    height: 62px;
+    background-color: none;
     top: 0;
     left: 0;
     right: 0;
     position: fixed;
+    z-index: 9999;
 }
 
 #tasbar {
@@ -77,42 +130,42 @@ body {
     margin: 20px auto 0px auto;
     border: 0.25px solid #72727280;
     align-items: center;
+    justify-content: space-between;
 }
 
-#leftmenu {
-    display: flex;
-    position: absolute;
+#avartar {
+    width: 25%;
 }
 
 #avartar img {
+    position: absolute;
     width: 35px;
     height: 35px;
     border-radius: 100%;
     display: flex;
-    justify-items: center;
     margin-left: 3px;
+    transform: translateY(-50%);
 }
 
 #name {
+    width: 25%;
+    position: static;
     font-family: 'Montserrat';
     font-weight: 900;
     color: #ffffffc9;
+    justify-content: right;
     display: flex;
-    justify-items: center;
-    align-items: center;
-    margin-left: 7px;
+    margin-right: 10px;
 }
 
 #nav {
     margin: 0;
     padding: 0;
     width: 100vw;
-    height: 100vh;
     display: flex;
     list-style: none;
     align-items: center;
     justify-content: center;
-    flex-shrink: 1;
 }
 
 #nav li {
@@ -160,27 +213,24 @@ body {
     justify-content: center;
     border-radius: 99999px;
     box-shadow: 0 0 30px #adadad44  ;
-    transition: 
-        background-color 0.4s ease,
-        color 0.5s ease,
-        box-shadow 0.5s ease;
+    
 }
 
+/*-----------------------------------------------------------------*/
 
 #home {
     margin: 0;
     padding: 0;
     width: 100vw;            
-    height: 2000px;
-    background-color: rgb(0, 0, 0);
+    height: 100vh;
+    background-color: #000000;
 }
 
 #start {
     display: flex;
     flex-direction: column;
     margin: auto auto auto auto;
-    padding: 200px 0;
-    height: 500px;
+    height: 100vh;
     width: 50vw;
     text-align: center;
     justify-content: center;
@@ -191,7 +241,7 @@ body {
 #portfolio {
     font-family: 'Montserrat';
     font-weight: 800;
-    background: linear-gradient(to left,#CADCFC, #225cfa, #007cf0);
+    background: linear-gradient(to left,#e3efff, #4b9fff, #0c59be);
     background-clip: text;         
     color: transparent;
     text-align: center;
@@ -203,7 +253,7 @@ body {
 #slogan {
     display: flex;
     font-family: 'playfair'; 
-    font-weight: 600;
+    font-weight: 550;
     margin: 0;
     height: auto;
     width: 50vw;
@@ -212,28 +262,181 @@ body {
     align-items: center;
     font-size: 3rem;
     color: #ffffff;
-    text-shadow: 0 0 5rem 1rem #7a7a7a2c  ;
+    text-shadow: 0 0 5rem 1rem #7a7a7a2c;
 }
 
 #welcome {
-    font-family: 'Montserrat';
-    font-weight: 500;
+    font-family: 'amatic sc';
+    font-weight: 450;
     color: #afafaf;
     padding-top: 1vh;
-    font-size: 1.25rem;
+    font-size: 1.75rem;
 }
 
-#about {
-    height: 2000px;
-    background-color: rgb(51, 51, 51);
+#sig img {
+    position: absolute;
+    width: 170px;
+    height: auto;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    transform: translate(5vw, -4vh);
 }
+
+/*-----------------------------------------------------------------*/
+
+#wall {
+    width: 100vw;
+    height: 3vh;
+    background: repeating-linear-gradient(
+        45deg,
+        #000000,        
+        #000000 2px,   
+        #333333 5px,   
+        #000000 6px  
+    );
+    border: 1px solid #444;
+}
+
+/*-----------------------------------------------------------------*/
+#about {
+    margin: 0;
+    padding: 0;
+    width: 100vw;            
+    height: auto;
+    background-color: rgb(0, 0, 0);
+    justify-content: space-between;
+    display: flex;
+}
+
+#text {
+    width: 35%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+#aboutme {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Montserrat'; 
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: rgb(138, 138, 138);
+    align-items: center;
+    justify-content: space-between;
+}
+
+#job {
+    font-family: 'amatic sc'; 
+    font-size: 3rem;
+    color: white;
+    text-shadow: 0 0 5rem 2rem #ffffff
+}
+
+#about-highlight {
+    background: linear-gradient(
+        to right,
+        rgb(255, 82, 2),
+        rgb(177, 43, 255),
+        rgb(0, 88, 219),
+        rgb(255, 131, 15),
+        rgb(255, 94, 0)
+    );
+    background-size: 200% auto;
+    background-clip: text;
+    color: transparent;
+    animation: shine 8s linear infinite;
+    font-weight: bold;
+}
+
+@keyframes shine {
+    from {
+        background-position: 0%;
+    }
+
+    to {
+        background-position: 200% center;
+    }
+}
+
+#introduce {
+    font-family: 'Work sans'; 
+    font-size: 1.25rem;
+    font-weight: 350;
+    color: rgb(201, 199, 199);
+}
+
+#mxh {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+#mxh img {
+    width: 25px;
+    
+}
+
+#slider {
+    display: flex;
+    width: max-content;
+    animation: scroll 15s linear infinite;
+    gap: 20px;
+}
+
+#pic {
+    width: 45%;
+    margin-right: 7%;
+    padding: 5% 0 5% 0;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    mask-image: linear-gradient(to right, transparent, black 20%, rgb(0, 0, 0) 80%, transparent);
+}
+
+#pic img {
+    flex-shrink: 0;
+    width: 250px ;
+    aspect-ratio: 1/1;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-50% - 20px)); 
+    }
+}
+
+/*-----------------------------------------------------------------*/
 
 #project {
-    height: 2000px;
-    background-color: rgb(122, 122, 122);
+    margin: 0;
+    padding: 0;
+    width: 100vw;            
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
 }
 
-#contact {
-    height: 2000px;
-    background-color: rgb(209, 209, 209);
+/*-----------------------------------------------------------------*/
+
+#contact{
+    margin: 0;
+    padding: 0;
+    width: 100vw;            
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
 }
